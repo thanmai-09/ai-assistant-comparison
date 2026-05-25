@@ -28,10 +28,29 @@ if user_input:
 
     memory = get_memory()
 
-    full_prompt = ""
+    conversation_history = ""
 
     for chat in memory:
-        full_prompt += f"{chat['role']}: {chat['content']}\n"
+
+        if chat["role"] == "user":
+            conversation_history += f"User: {chat['content']}\n"
+
+        else:
+            conversation_history += f"Assistant: {chat['content']}\n"
+
+    full_prompt = f"""
+You are a helpful AI assistant.
+
+Use previous conversation context carefully.
+
+Conversation History:
+{conversation_history}
+
+Current User Question:
+{user_input}
+
+Assistant:
+"""
 
     response = get_oss_response(full_prompt)
 
