@@ -13,7 +13,7 @@ The OSS assistant uses the Qwen2.5-0.5B-Instruct model running locally through H
 
 ---
 
-# Features
+## Features
 
 - Interactive chatbot interface using Streamlit
 - Assistant selection between OSS and Frontier assistants
@@ -26,7 +26,7 @@ The OSS assistant uses the Qwen2.5-0.5B-Instruct model running locally through H
 
 ---
 
-# Technologies Used
+## Technologies Used
 
 - Python
 - Streamlit
@@ -37,7 +37,7 @@ The OSS assistant uses the Qwen2.5-0.5B-Instruct model running locally through H
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 User Input  
 ↓  
@@ -55,7 +55,7 @@ Chat Display
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 ai-assistant-comparison/
@@ -81,7 +81,7 @@ ai-assistant-comparison/
 
 ---
 
-# Screenshots
+## Screenshots
 
 ## Home UI
 
@@ -125,7 +125,7 @@ ai-assistant-comparison/
 
 ---
 
-# OSS Assistant Evaluation
+## OSS Assistant Evaluation
 
 | Evaluation Aspect | Observation |
 |-------------------|-------------|
@@ -139,7 +139,7 @@ ai-assistant-comparison/
 
 ---
 
-# Key Findings
+## Key Findings
 
 - The OSS assistant was able to remember recent user information in short conversations.
 - The model occasionally generated factual hallucinations.
@@ -149,7 +149,7 @@ ai-assistant-comparison/
 
 ---
 
-# Limitations
+## Limitations
 
 - Small OSS model size (0.5B) caused factual inaccuracies and hallucinations.
 - Conversational memory was limited.
@@ -158,7 +158,7 @@ ai-assistant-comparison/
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 - Use larger open-source language models
 - Add persistent database memory
@@ -169,12 +169,12 @@ ai-assistant-comparison/
 
 ---
 
-# How to Run the Project
+## How to Run the Project
 
 ## 1. Clone the Repository
 
 ```bash
-git clone <your-repository-link>
+git clone https://github.com/thanmai-09/ai-assistant-comparison.git
 ```
 
 ## 2. Install Dependencies
@@ -191,6 +191,6 @@ streamlit run app.py
 
 ---
 
-# Conclusion
+## Conclusion
 
 This project demonstrates the practical differences between a local open-source AI assistant and a frontier API-based assistant. The evaluation highlights important aspects such as conversational memory, factual accuracy, reasoning capability, hallucinations, safety behavior, and API limitations in modern AI systems.
