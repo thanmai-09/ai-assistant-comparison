@@ -2,8 +2,14 @@ import streamlit as st
 
 from assistants.oss_assistant import get_oss_response
 from assistants.memory import add_to_memory, get_memory
+from assistants.frontier_assistant import get_frontier_response
 
-st.title("OSS AI Assistant")
+st.title("AI Assistant Comparison")
+assistant_type = st.selectbox(
+    "Choose Assistant",
+    ["OSS Assistant", "Frontier Assistant"]
+    
+)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -52,8 +58,12 @@ Current User Question:
 Assistant:
 """
 
-    response = get_oss_response(full_prompt)
+    if assistant_type == "OSS Assistant":
+        response = get_oss_response(full_prompt)
 
+    else:
+        response = get_frontier_response(full_prompt)
+    # response = get_frontier_response(full_prompt)
     add_to_memory("assistant", response)
 
     st.session_state.messages.append(
